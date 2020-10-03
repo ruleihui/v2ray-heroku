@@ -1,14 +1,13 @@
 {
-    "name": "V2Ray",
+    "name": "wordpress",
     "description": "Deploy V2ray on Heroku.",
-    "keywords": ["V2Ray"],
+    "keywords": ["wordpress"],
     "env": {
         "UUID": {
-            "description": "V2Ray UUID",
+            "description": "wordpress UUID",
             "value": "fb8098a5-9910-4c4b-8009-30788a761a08"
         }
     },
-    "website": "https://ibcl.us/Heroku-V2Ray_20191014/",
-    "repository": "https://github.com/bclswl0827/v2ray-heroku",
+    "repository": "https://github.com/ruleihui/v2ray-heroku",
     "stack": "container"
 }

@@ -1,6 +1,6 @@
 {
     "name": "wordpress",
-    "description": "Deploy V2ray on Heroku.",
+    "description": "Deploy wordpress on Heroku.",
     "keywords": ["wordpress"],
     "env": {
         "UUID": {

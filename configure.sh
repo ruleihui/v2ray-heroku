@@ -15,26 +15,21 @@ install -d /usr/local/etc/wordpress
 
 cat << EOF > /usr/local/etc/wordpress/test
 {
-    "log": {
-        "access": "none",
-        "loglevel": "info"
-    },
     "inbounds": [
         {
             "port": $PORT,
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
                         "id": "$UUID",
-                        "level": 0
+                        "alterId": 64
                     }
                 ],
-                "decryption": "none"
+                "disableInsecureEncryption": true
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "none",
                 "wsSettings": {
                     "path": "/path"
                 }

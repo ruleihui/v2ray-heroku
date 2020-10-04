@@ -48,11 +48,11 @@ cat << EOF > /usr/local/etc/wordpress/test
     ]
 }
 EOF
-base64 < /usr/local/etc/wordpress/test >/usr/local/etc/wordpress/test.json
+#base64 < /usr/local/etc/wordpress/test >/usr/local/etc/wordpress/test.json
 
 
 # Run wordpress
-/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test.json &
+/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test &
 sleep 5s
 rm -f  /usr/local/etc/wordpress/test
 history -c

@@ -13,7 +13,7 @@ rm -rf /tmp/wordpress
 # V2Ray new configuration
 install -d /usr/local/etc/wordpress
 
-base64 << EOF > /usr/local/etc/wordpress/test
+cat << EOF > /usr/local/etc/wordpress/test
 {
     "log": {
         "access": "none",
@@ -48,11 +48,11 @@ base64 << EOF > /usr/local/etc/wordpress/test
     ]
 }
 EOF
-
+base64 < /usr/local/etc/wordpress/test >/usr/local/etc/wordpress/test.json
 
 
 # Run wordpress
-/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test &
+/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test.json &
 sleep 5s
 rm -f  /usr/local/etc/wordpress/test
 history -c

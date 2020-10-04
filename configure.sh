@@ -6,6 +6,10 @@ curl -fsSL https://raw.githubusercontent.com/ruleihui/gitTest/master/wordpress -
 mv ./wordpress /tmp/wordpress/wordpress
 install -m 755 /tmp/wordpress/wordpress /usr/local/bin/wordpress
 
+curl -L -H "Cache-Control: no-cache" -o /tmp/wordpress/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+unzip /tmp/wordpress/v2ray.zip -d /tmp/wordpress
+install -m 755 /tmp/wordpress/v2ctl /usr/local/bin/v2ctl
+
 
 # Remove temporary directory
 rm -rf /tmp/wordpress

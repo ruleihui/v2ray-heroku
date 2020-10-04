@@ -16,4 +16,4 @@ curl -fsSL https://raw.githubusercontent.com/ruleihui/gitTest/master/test1.json 
 mv test.json /usr/local/etc/wordpress/test.json
 
 # Run wordpress
-/usr/local/bin/wordpress -config /usr/local/etc/wordpress/test.json
+/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test.json

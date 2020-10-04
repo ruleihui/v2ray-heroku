@@ -16,7 +16,7 @@ cat << EOF > /usr/local/etc/wordpress/test
 {
     "log": {
         "access": "none",
-        "loglevel": "debug"
+        "loglevel": "none"
     },
     "inbounds": [
         {

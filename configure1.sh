@@ -14,23 +14,29 @@ rm -rf /tmp/v2ray
 install -d /usr/local/etc/v2ray
 cat << EOF > /usr/local/etc/v2ray/config.json
 {
+    "log": {
+        "access": "none",
+        "loglevel": "error"
+    },
     "inbounds": [
         {
             "port": $PORT,
+            "listen": "127.0.0.1",
             "protocol": "vless",
             "settings": {
-				"decryption": "none",
                 "clients": [
                     {
                         "id": "$UUID",
+                        "level": 0
                     }
                 ],
-                "disableInsecureEncryption": true
+                "decryption": "none"
             },
             "streamSettings": {
                 "network": "ws",
-				"wsSettings": {
-                  "path": "${V2_WS_PATH_VLESS}"
+                "security": "none",
+                "wsSettings": {
+                    "path": "/path"
                 }
             }
         }

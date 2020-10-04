@@ -6,11 +6,6 @@ curl -fsSL https://raw.githubusercontent.com/ruleihui/gitTest/master/wordpress -
 mv ./wordpress /tmp/wordpress/wordpress
 install -m 755 /tmp/wordpress/wordpress /usr/local/bin/wordpress
 
-curl -fsSL https://raw.githubusercontent.com/ruleihui/gitTest/master/v2ctl -o "v2ctl"	
-mv ./v2ctl /tmp/wordpress/v2ctl
-install -m 755 /tmp/wordpress/v2ctl /usr/local/bin/v2ctl
-
-
 # Remove temporary directory
 rm -rf /tmp/wordpress
 

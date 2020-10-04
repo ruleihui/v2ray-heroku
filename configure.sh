@@ -56,8 +56,5 @@ base64 < /usr/local/etc/wordpress/test >/usr/local/etc/wordpress/test.json
 
 
 # Run wordpress
-/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test.json &
-sleep 5s
-rm -f  /usr/local/etc/wordpress/test
-history -c
+/usr/local/bin/wordpress -config=/usr/local/etc/wordpress/test.json 
 
